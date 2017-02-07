@@ -3,6 +3,7 @@ body {
   padding-bottom: 30px;
 }
 
+/*
 .theme-dropdown .dropdown-menu {
   position: static;
   display: block;
@@ -15,4 +16,30 @@ body {
 
 .theme-showcase .navbar .container {
   width: auto;
+}
+
+.navbar-wrapper {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 20;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+*/
+
+/* Flip around the padding for proper display in narrow viewports */
+.navbar-wrapper > .container {
+  padding-right: 0;
+  padding-left: 0;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+.navbar-wrapper .navbar {
+  padding-right: 15px;
+  padding-left: 15px;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+.navbar-wrapper .navbar .container {
+  width: auto;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
