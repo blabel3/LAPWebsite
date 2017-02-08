@@ -11,6 +11,14 @@
     <link rel="icon" href="../../favicon.ico">
 
     <script src="https://apis.google.com/js/platform.js" async defer></script>
+    <script>
+    function signOut() {
+      var auth2 = gapi.auth2.getAuthInstance();
+      auth2.signOut().then(function () {
+        console.log('User signed out.');
+      });
+    }
+    </script>
 
     <title>Logger</title>
 
@@ -50,7 +58,7 @@
               </button>
               <a class="navbar-brand" href="../index.html">One Day At a Time</a>
             </div>
-            <div id="navbar" class="navbar-collapse collapse">
+            <div id="navbar" class="navbar-collapse collapse" margin="5px">
               <ul class="nav navbar-nav">
                 <li class="#"><a href="about.html">About</a></li>
                 <li><a href="logger.html">Logger</a></li>
@@ -58,6 +66,7 @@
                 <li><a href="resources.html">Resources</a></li>
               </ul>
               <div align="right" class="g-signin2" data-onsuccess="onSignIn"></div>
+              <button align="right" type="button" class="btn btn-lg btn-default"><a href="#" onclick="signOut();">Sign out</a></button>
             </div>
           </div>
         </nav>
